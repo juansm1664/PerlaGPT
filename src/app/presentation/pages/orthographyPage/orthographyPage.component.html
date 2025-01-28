@@ -1,10 +1,19 @@
 <div class="chat-container">
   <div class="chat-messages">
-    <div class="grip gap-y-3">
-      <!--MessaChat -->
-      <h1>Hola traductor</h1>
+    <div class="grip gap-y-2">
+      <app-chat-message
+        text="Escribe un texto para poder revisarlo."
+      />
+
+      <app-my-message
+        text="Hola, ¿cómo estás?"
+      />
+
+      <app-typing-loader/>
     </div>
+
   </div>
 
   <!--MessaBox-->
+  <app-text-message-box/>
 </div>
