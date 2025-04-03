@@ -1,16 +1,24 @@
-<form class="flex flex-row items-center h-13 rounded-xl bg-white w-full px-4">
+<form
+  [formGroup]="form"
+  (ngSubmit)="hadleSubmit()"
+  class="flex flex-row items-center h-13 rounded-xl bg-white w-full px-4"
+>
   <div class="flex-row">
     <div class="relative w-full">
       <input
         type="text"
         autofocus
         class="flex w-full border rounded-xl text-gray-800 focus:outline-none focus:border-indigo-600 pl-14 h-10"
-        placeholder="mensaje..."
+        placeholder="placeholder"
+        formControlName="prompt"
       />
     </div>
   </div>
   <div class="ml-4">
-    <button class="btn-primary" type="submit">
+    <button
+      class="btn-primary"
+      type="submit">
+      <span class="ml-2">Enviar</span>
       <i class="fa-regular fa-paper-plane"></i>
     </button>
   </div>
