@@ -1,19 +1,30 @@
 <div class="chat-container">
   <div class="chat-messages">
     <div class="grip gap-y-2">
-      <app-chat-message
-        text="Escribe un texto para poder revisarlo."
-      />
+      <app-chat-message text="Escribe un texto para poder revisarlo." />
 
-      <app-my-message
-        text="Hola, ¿cómo estás?"
-      />
+      <app-my-message text="Hola, ¿cómo estás?" />
 
-      <app-typing-loader/>
+      <app-typing-loader />
     </div>
-
   </div>
 
   <!--MessaBox-->
-  <app-text-message-box/>
+  <!-- <<app-text-message-box
+    placeholder="Escribe aquí..."
+    (onMessage)="handleMessage('$event')"
+  /> -->
+  <!-- <app-text-message-box-file
+    placeholder="Escribe aquí..."
+    (onMessage)="handleMessageWhitFile($event)"
+  /> -->
+
+  <app-text-message-box-select
+    placeholder="Escribe aquí..."
+    [options]="[
+      { id: '1', text: 'Opción 1' },
+      { id: '2', text: 'Opción 2' }
+    ]"
+    (onMessage)="handleMessageWhitSelect($event)"
+  />
 </div>

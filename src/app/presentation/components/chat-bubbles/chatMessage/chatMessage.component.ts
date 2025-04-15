@@ -9,6 +9,6 @@ import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ChatMessageComponent {
-
-  @Input({required: true}) text!: string;
+  // indica que el componente padre debe proporcionar un valor para esta propiedad
+  @Input({ required: true }) text!: string;
 }
